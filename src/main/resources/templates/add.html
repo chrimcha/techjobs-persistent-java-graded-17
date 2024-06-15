@@ -16,6 +16,7 @@
 
     <div class="form-group">
         <label th:for="employer">Employer</label>
+<!--        <input type="hidden" th:value="${job.id}" th:field="${jobSkill.job}">-->
         <select name="employerId">
             <option th:each="employer : ${employers}"
                     th:text="${employer.name}"
