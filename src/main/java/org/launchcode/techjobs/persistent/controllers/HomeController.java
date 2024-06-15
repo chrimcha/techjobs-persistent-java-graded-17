@@ -58,6 +58,7 @@ public class HomeController {
 
         if (errors.hasErrors()) {
 	        model.addAttribute("title", "Add Job");
+            model.addAttribute(newJob);
             return "add";
         } else {
             Optional<Employer> result = employerRepository.findById(employerId);
@@ -66,7 +67,6 @@ public class HomeController {
             model.addAttribute("employer", employer);
             newJob.setSkills(skillObjs);
             newJob.setEmployer(employer);
-//            model.addAttribute(newJob);
             jobRepository.save(newJob);
         }
 
