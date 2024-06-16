@@ -63,6 +63,7 @@ public class HomeController {
             return "add";
         }
 
+        // the order of this matters!!!
         List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
         newJob.setSkills(skillObjs);
 
