@@ -1,11 +1,11 @@
 package org.launchcode.techjobs.persistent.models.data;
 
-import jakarta.transaction.Transactional;
-import org.launchcode.techjobs.persistent.models.Job;
+import org.launchcode.techjobs.persistent.models.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Transactional
-public interface JobRepository extends CrudRepository<Job, Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
+
+    User findByUsername(String username);
 }
